@@ -16,7 +16,7 @@ function Menu() {
                         href="/blog/[id]/[title]"
                         as="/blog/1/some-pretty-url"
                     >
-                        <a>Post 1</a>
+                        <a>Blog 1</a>
                     </Link>
                 </li>
                 <li>
@@ -24,7 +24,7 @@ function Menu() {
                         href="/blog/[id]/[title]"
                         as="/blog/2/some-pretty-url2"
                     >
-                        <a>Post 2</a>
+                        <a>Blog 2</a>
                     </Link>
                 </li>
                 <li>
@@ -32,7 +32,7 @@ function Menu() {
                         href="/blog/[id]/[title]"
                         as="/blog/3/some-pretty-url3"
                     >
-                        <a>Post 3</a>
+                        <a>Blog 3</a>
                     </Link>
                 </li>
             </ul>
@@ -42,7 +42,7 @@ function Menu() {
                 <li>
                     <Link
                         href="/index?id=1&amp;title=some-pretty-url"
-                        as="/blog/1/some-pretty-url1"
+                        as="/post/1/some-pretty-url1"
                     >
                         <a>Post 1</a>
                     </Link>
@@ -50,7 +50,7 @@ function Menu() {
                 <li>
                     <Link
                         href="/index?id=2&amp;title=some-pretty-url2"
-                        as="/blog/2/some-pretty-url2"
+                        as="/post/2/some-pretty-url2"
                     >
                         <a>Post 2</a>
                     </Link>
@@ -58,7 +58,7 @@ function Menu() {
                 <li>
                     <Link
                         href="/index?id=3&amp;title=some-pretty-url3"
-                        as="/blog/3/some-pretty-url3"
+                        as="/post/3/some-pretty-url3"
                     >
                         <a>Post 3</a>
                     </Link>
