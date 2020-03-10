@@ -6,7 +6,7 @@ function Index(props: any) {
         <>
             <Menu />
             <h1>{props.id ? `ID: ${props.id}` : "Home"}</h1>
-            {props.title && <p>Title : {props.id}</p>}
+            {props.title && <p>Title : {props.title}</p>}
         </>
     );
 }
