@@ -11,20 +11,14 @@ module.exports = {
                 {
                     source: "/post/:id",
                     destination: "/index?id=:id"
-                }
-            ];
-        },
-        async redirects() {
-            return [
+                },
                 {
                     source: "/rss/fd",
-                    destination: "https://fd.nl?rss",
-                    permanent: false
+                    destination: "https://fd.nl/?rss"
                 },
                 {
                     source: "/rss/fd/:section",
-                    destination: "https://fd.nl/$1/?rss",
-                    permanent: false
+                    destination: "https://fd.nl/$1/?rss"
                 }
             ];
         }
