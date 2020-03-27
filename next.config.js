@@ -18,11 +18,13 @@ module.exports = {
             return [
                 {
                     source: "/rss/fd",
-                    destination: "https://fd.nl?rss"
+                    destination: "https://fd.nl?rss",
+                    permanent: false
                 },
                 {
                     source: "/rss/fd/:section",
-                    destination: "https://fd.nl/$1/?rss"
+                    destination: "https://fd.nl/$1/?rss",
+                    permanent: false
                 }
             ];
         }
