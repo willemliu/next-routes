@@ -11,6 +11,14 @@ module.exports = {
                 {
                     source: "/post/:id",
                     destination: "/index?id=:id"
+                },
+                {
+                    source: "/rss/fd",
+                    destination: "https://fd.nl?rss"
+                },
+                {
+                    source: "/rss/fd/:section",
+                    destination: "https://fd.nl/$1/?rss"
                 }
             ];
         }
