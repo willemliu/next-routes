@@ -11,7 +11,11 @@ module.exports = {
                 {
                     source: "/post/:id",
                     destination: "/index?id=:id"
-                },
+                }
+            ];
+        },
+        async redirects() {
+            return [
                 {
                     source: "/rss/fd",
                     destination: "https://fd.nl?rss"
