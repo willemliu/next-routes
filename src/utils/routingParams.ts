@@ -1,5 +1,6 @@
 import { NextRouter } from "next/router";
 import { NextPageContext } from "next";
+import "isomorphic-unfetch";
 
 type RoutingParams = {
     match: (ctx: NextPageContext) => boolean;
