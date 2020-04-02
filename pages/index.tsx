@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "../src/Menu";
 import { Footer } from "../src/Footer";
 import Router from "next/router";
-import { checkRedirects } from "../src/utils/redirects";
+import { checkRedirects, checkRewrites } from "../src/utils/redirects";
 
 function Index(props: any) {
     return (
@@ -17,6 +17,7 @@ function Index(props: any) {
 
 Index.getInitialProps = (ctx) => {
     console.log(ctx.query, ctx.params);
+    checkRewrites(ctx, Router);
     checkRedirects(ctx, Router);
     return { ...ctx.query };
 };
