@@ -15,9 +15,13 @@ function Index(props: any) {
     );
 }
 
-Index.getInitialProps = (ctx) => {
+Index.getInitialProps = async (ctx) => {
     console.log(ctx.query, ctx.params);
-    checkRedirects(ctx, Router);
+    try {
+        await checkRedirects(ctx, Router);
+    } catch (e) {
+        console.error(e);
+    }
     return { ...ctx.query };
 };
 

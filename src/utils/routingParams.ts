@@ -4,7 +4,7 @@ import "isomorphic-unfetch";
 
 type RoutingParams = {
     match: (ctx: NextPageContext) => boolean;
-    run: (ctx: NextPageContext, Router: NextRouter) => void;
+    run: (ctx: NextPageContext, Router: NextRouter) => Promise<void>;
 }[];
 
 /**
@@ -22,9 +22,9 @@ export const routingParams: RoutingParams = [
                     "Content-Type": "application/rss+xml;charset=UTF-8"
                 });
                 ctx.res.write(
-                    fetch(
-                        "https://next-router.willemliu.now.sh/api/test"
-                    ).then((res) => res.json())
+                    await fetch(
+                        "https://next-routes.willemliu.now.sh/api/test"
+                    ).then((res) => res.text())
                 );
                 ctx.res.end();
             }
@@ -32,7 +32,7 @@ export const routingParams: RoutingParams = [
     },
     {
         match: (ctx) => typeof ctx.query?.widget !== "undefined",
-        run: (ctx, Router) => {
+        run: async (ctx, Router) => {
             if (typeof window !== "undefined") {
                 Router.push("/api/test");
             } else {
